@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  class_key: MyString
+  duration_of_weeks: 1
+  classname: MyString
+
+two:
+  class_key: MyString
+  duration_of_weeks: 1
+  classname: MyString

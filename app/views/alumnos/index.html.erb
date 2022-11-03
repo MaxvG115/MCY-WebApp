@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Alumnos</h1>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+     <tr>
+        <th>Matricula</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Periodo actual</th>
+        <th>Porcentaje beca</th>
+        <th>Nivel</th>
+        <th>Unidades permitdas a inscribir</th>
+        <th>Promedio acomulado</th>
+        <th>Trimestre acreditado</th>
+        <th>Ultimo periodo cursado</th>
+        <th>Fecha entrada</th>
+        <th>Fecha graduacion planeada</th>
+        <th>Numero cursos cursados</th>
+        <th>Beca</th>
+        <th>Patrocinado</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @alumnos.each do |alumno| %>
+        <tr>
+          <td><%= alumno.matricula %></td>
+          <td><%= alumno.name %></td>
+          <td><%= alumno.email %></td>
+          <td><%= alumno.phone %></td>
+          <td><%= alumno.periodo_actual %></td>
+          <td><%= alumno.porcentaje_beca %></td>
+          <td><%= alumno.nivel %></td>
+          <td><%= alumno.unidades_permitdas_a_inscribir %></td>
+          <td><%= alumno.promedio_acomulado %></td>
+          <td><%= alumno.trimestre_acreditado %></td>
+          <td><%= alumno.ultimo_periodo_cursado %></td>
+          <td><%= alumno.fecha_entrada %></td>
+          <td><%= alumno.fecha_graduacion_planeada %></td>
+          <td><%= alumno.numero_cursos_cursados %></td>
+          <td><%= alumno.beca %></td>
+          <td><%= alumno.patrocinado %></td>
+          <td><%= link_to 'Show', alumno %></td>
+          <td><%= link_to 'Edit', edit_alumno_path(alumno) %></td>
+          <td><%= link_to 'Destroy', alumno, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<br>
+
+<h3>Importar Alumnos</h3>
+<%= form_tag import_alumnos_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Subir alumnos"%>
+<%end%>
+
+<%= link_to 'New Alumno', new_alumno_path %>

@@ -1,0 +1,30 @@
+<%= form_with model: subject do |form| %>
+    <div>
+      <%= form.label :Codigo_de_materia %><br>
+      <%= form.text_field :class_key %>
+      <% subject.errors.full_messages_for(:class_key).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+    <div>
+      <%= form.label :Duración_de_semanas %><br>
+      <%= form.text_field :duration_of_weeks %>
+      <% subject.errors.full_messages_for(:duration_of_weeks).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+    <div>
+      <%= form.label :Nombre_de_clase %><br>
+      <%= form.text_field :classname %>
+      <% subject.errors.full_messages_for(:classname).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+    <div>
+        <%= form.label :Tipo_de_materia %><br>
+        <%= form.select(:subject_type_id, options_for_select(@subject_types)) %>
+    </div>
+    <div>
+      <%= form.submit %>
+    </div>
+<% end %>

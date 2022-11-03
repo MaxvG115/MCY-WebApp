@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  matricula: MyString
+  name: MyText
+  email: MyString
+  phone: MyString
+  periodo_actual: MyString
+  porcentaje_beca: MyString
+  nivel: MyString
+  unidades_permitdas_a_inscribir: MyString
+  promedio_acomulado: MyString
+  trimestre_acreditado: MyString
+  ultimo_periodo_cursado: MyString
+  fecha_entrada: MyString
+  fecha_graduacion_planeada: MyString
+  numero_cursos_cursados: MyString
+  beca: MyString
+  patrocinado: MyString
+
+two:
+  matricula: MyString
+  name: MyText
+  email: MyString
+  phone: MyString
+  periodo_actual: MyString
+  porcentaje_beca: MyString
+  nivel: MyString
+  unidades_permitdas_a_inscribir: MyString
+  promedio_acomulado: MyString
+  trimestre_acreditado: MyString
+  ultimo_periodo_cursado: MyString
+  fecha_entrada: MyString
+  fecha_graduacion_planeada: MyString
+  numero_cursos_cursados: MyString
+  beca: MyString
+  patrocinado: MyString

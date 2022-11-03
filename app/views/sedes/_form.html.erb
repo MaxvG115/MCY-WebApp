@@ -1,0 +1,13 @@
+<%= form_with model: sede do |form| %>
+  <div>
+    <%= form.label :Nombre_sede %><br>
+    <%= form.text_field :sede_name %>
+    <% sede.errors.full_messages_for(:sede_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,8 @@
+<h1><%= @sede.sede_name %></h1>
+<ul>
+  <li><%= link_to "Actualizar", edit_sede_path(@sede) %></li>
+  <li><%= link_to "Eliminar", sede_path(@sede), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>

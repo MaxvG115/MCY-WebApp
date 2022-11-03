@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Matricula:</strong>
+  <%= @alumno.matricula %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @alumno.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @alumno.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @alumno.phone %>
+</p>
+
+<p>
+  <strong>Periodo actual:</strong>
+  <%= @alumno.periodo_actual %>
+</p>
+
+<p>
+  <strong>Porcentaje beca:</strong>
+  <%= @alumno.porcentaje_beca %>
+</p>
+
+<p>
+  <strong>Nivel:</strong>
+  <%= @alumno.nivel %>
+</p>
+
+<p>
+  <strong>Unidades permitdas a inscribir:</strong>
+  <%= @alumno.unidades_permitdas_a_inscribir %>
+</p>
+
+<p>
+  <strong>Promedio acomulado:</strong>
+  <%= @alumno.promedio_acomulado %>
+</p>
+
+<p>
+  <strong>Trimestre acreditado:</strong>
+  <%= @alumno.trimestre_acreditado %>
+</p>
+
+<p>
+  <strong>Ultimo periodo cursado:</strong>
+  <%= @alumno.ultimo_periodo_cursado %>
+</p>
+
+<p>
+  <strong>Fecha entrada:</strong>
+  <%= @alumno.fecha_entrada %>
+</p>
+
+<p>
+  <strong>Fecha graduacion planeada:</strong>
+  <%= @alumno.fecha_graduacion_planeada %>
+</p>
+
+<p>
+  <strong>Numero cursos cursados:</strong>
+  <%= @alumno.numero_cursos_cursados %>
+</p>
+
+<p>
+  <strong>Beca:</strong>
+  <%= @alumno.beca %>
+</p>
+
+<p>
+  <strong>Patrocinado:</strong>
+  <%= @alumno.patrocinado %>
+</p>
+
+<%= link_to 'Edit', edit_alumno_path(@alumno) %> |
+<%= link_to 'Back', alumnos_path %>

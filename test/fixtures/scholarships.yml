@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  beca_base: 1
+  nombre_beca: MyString
+
+two:
+  beca_base: 1
+  nombre_beca: MyString

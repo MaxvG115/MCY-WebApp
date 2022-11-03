@@ -1,0 +1,13 @@
+<%= form_with model: academic_program do |form| %>
+  <div>
+    <%= form.label :Programa_academico %><br>
+    <%= form.text_field :name_academic_program %>
+    <% academic_program.errors.full_messages_for(:name_academic_program).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

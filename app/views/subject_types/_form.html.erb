@@ -1,0 +1,13 @@
+<%= form_with model: subject_type do |form| %>
+  <div>
+    <%= form.label :Nombre_tipo_materia %><br>
+    <%= form.text_field :name_subject_type %>
+    <% subject_type.errors.full_messages_for(:name_subject_type).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

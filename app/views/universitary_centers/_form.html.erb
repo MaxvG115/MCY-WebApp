@@ -1,0 +1,16 @@
+<%= form_with model: universitary_center do |form| %>
+    <div>
+    <%= form.label :Nombre_centro_universitario %><br>
+    <%= form.text_field :universitary_center_name %>
+    <% universitary_center.errors.full_messages_for(:universitary_center_name).each do |message| %>
+        <div><%= message %></div>
+    <% end %>
+    </div>
+    <div>
+        <%= form.label :Sede_a_la_que_pertenece %><br>
+        <%= form.select(:sede_id, options_for_select(@sede)) %>
+    </div>
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

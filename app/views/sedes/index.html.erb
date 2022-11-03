@@ -1,0 +1,11 @@
+<h1>Sedes</h1>
+
+<ul>
+  <% @sedes.each do |sede| %>
+    <li>
+        <%= link_to sede.sede_name, sede%>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Nueva sede", new_sede_path%>

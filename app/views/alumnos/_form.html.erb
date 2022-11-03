@@ -1,0 +1,97 @@
+<%= form_with(model: alumno) do |form| %>
+  <% if alumno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(alumno.errors.count, "error") %> prohibited this alumno from being saved:</h2>
+
+      <ul>
+        <% alumno.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :matricula %>
+    <%= form.text_field :matricula %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :periodo_actual %>
+    <%= form.text_field :periodo_actual %>
+  </div>
+
+  <div class="field">
+    <%= form.label :porcentaje_beca %>
+    <%= form.text_field :porcentaje_beca %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nivel %>
+    <%= form.text_field :nivel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unidades_permitdas_a_inscribir %>
+    <%= form.text_field :unidades_permitdas_a_inscribir %>
+  </div>
+
+  <div class="field">
+    <%= form.label :promedio_acomulado %>
+    <%= form.text_field :promedio_acomulado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trimestre_acreditado %>
+    <%= form.text_field :trimestre_acreditado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ultimo_periodo_cursado %>
+    <%= form.text_field :ultimo_periodo_cursado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_entrada %>
+    <%= form.text_field :fecha_entrada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_graduacion_planeada %>
+    <%= form.text_field :fecha_graduacion_planeada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero_cursos_cursados %>
+    <%= form.text_field :numero_cursos_cursados %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beca %>
+    <%= form.text_field :beca %>
+  </div>
+
+  <div class="field">
+    <%= form.label :patrocinado %>
+    <%= form.text_field :patrocinado %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
