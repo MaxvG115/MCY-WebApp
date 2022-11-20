@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Student Subject Relations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Finalscore</th>
+      <th>Period</th>
+      <th>Alumnos</th>
+      <th>Subjects</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @student_subject_relations.each do |student_subject_relation| %>
+      <tr>
+        <td><%= student_subject_relation.finalscore %></td>
+        <td><%= student_subject_relation.period %></td>
+        <td><%= student_subject_relation.alumnos_id %></td>
+        <td><%= student_subject_relation.subjects_id %></td>
+        <td><%= link_to 'Show', student_subject_relation %></td>
+        <td><%= link_to 'Edit', edit_student_subject_relation_path(student_subject_relation) %></td>
+        <td><%= link_to 'Destroy', student_subject_relation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student Subject Relation', new_student_subject_relation_path %>

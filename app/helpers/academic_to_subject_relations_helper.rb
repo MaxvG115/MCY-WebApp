@@ -1,0 +1,2 @@
+module AcademicToSubjectRelationsHelper
+end

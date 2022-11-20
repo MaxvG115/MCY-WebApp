@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Alumnos:</strong>
+  <%= @historical_student_scholarship.alumnos_id %>
+</p>
+
+<p>
+  <strong>Scholarships:</strong>
+  <%= @historical_student_scholarship.scholarships_id %>
+</p>
+
+<%= link_to 'Edit', edit_historical_student_scholarship_path(@historical_student_scholarship) %> |
+<%= link_to 'Back', historical_student_scholarships_path %>

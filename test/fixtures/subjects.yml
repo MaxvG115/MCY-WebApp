@@ -4,8 +4,10 @@ one:
   class_key: MyString
   duration_of_weeks: 1
   classname: MyString
+  subject_type_id: 1
 
 two:
   class_key: MyString
   duration_of_weeks: 1
   classname: MyString
+  subject_type_id: 1

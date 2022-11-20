@@ -1,0 +1,1 @@
+json.partial! "historical_student_statuses/historical_student_status", historical_student_status: @historical_student_status

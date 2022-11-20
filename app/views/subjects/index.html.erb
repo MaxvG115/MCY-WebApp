@@ -1,1 +1,33 @@
-<h1>Materias</h1>
+<p id="notice"><%= notice %></p>
+
+<h1>Subjects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class key</th>
+      <th>Duration of weeks</th>
+      <th>Classname</th>
+      <th>Subject type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subjects.each do |subject| %>
+      <tr>
+        <td><%= subject.class_key %></td>
+        <td><%= subject.duration_of_weeks %></td>
+        <td><%= subject.classname %></td>
+        <td><%= subject.subject_type_id %></td>
+        <td><%= link_to 'Show', subject %></td>
+        <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
+        <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subject', new_subject_path %>

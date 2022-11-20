@@ -1,30 +1,37 @@
-<%= form_with model: subject do |form| %>
-    <div>
-      <%= form.label :Codigo_de_materia %><br>
-      <%= form.text_field :class_key %>
-      <% subject.errors.full_messages_for(:class_key).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
+<%= form_with(model: subject) do |form| %>
+  <% if subject.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(subject.errors.count, "error") %> prohibited this subject from being saved:</h2>
+
+      <ul>
+        <% subject.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
     </div>
-    <div>
-      <%= form.label :Duración_de_semanas %><br>
-      <%= form.text_field :duration_of_weeks %>
-      <% subject.errors.full_messages_for(:duration_of_weeks).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
-    </div>
-    <div>
-      <%= form.label :Nombre_de_clase %><br>
-      <%= form.text_field :classname %>
-      <% subject.errors.full_messages_for(:classname).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
-    </div>
-    <div>
-        <%= form.label :Tipo_de_materia %><br>
-        <%= form.select(:subject_type_id, options_for_select(@subject_types)) %>
-    </div>
-    <div>
-      <%= form.submit %>
-    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :class_key %>
+    <%= form.text_field :class_key %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration_of_weeks %>
+    <%= form.number_field :duration_of_weeks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :classname %>
+    <%= form.text_field :classname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subject_type_id %>
+    <%= form.number_field :subject_type_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
 <% end %>

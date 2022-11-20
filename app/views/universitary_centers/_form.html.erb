@@ -1,16 +1,27 @@
-<%= form_with model: universitary_center do |form| %>
-    <div>
-    <%= form.label :Nombre_centro_universitario %><br>
+<%= form_with(model: universitary_center) do |form| %>
+  <% if universitary_center.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(universitary_center.errors.count, "error") %> prohibited this universitary_center from being saved:</h2>
+
+      <ul>
+        <% universitary_center.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :universitary_center_name %>
     <%= form.text_field :universitary_center_name %>
-    <% universitary_center.errors.full_messages_for(:universitary_center_name).each do |message| %>
-        <div><%= message %></div>
-    <% end %>
-    </div>
-    <div>
-        <%= form.label :Sede_a_la_que_pertenece %><br>
-        <%= form.select(:sede_id, options_for_select(@sede)) %>
-    </div>
-    <div>
-        <%= form.submit %>
-    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :sede_id %>
+    <%= form.number_field :sede_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
 <% end %>

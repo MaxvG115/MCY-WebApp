@@ -1,0 +1,2 @@
+class SubjectStatus < ApplicationRecord
+end

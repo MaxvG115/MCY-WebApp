@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subjects:</strong>
+  <%= @academic_to_subject_relation.subjects_id %>
+</p>
+
+<p>
+  <strong>Academicprograms idbody:</strong>
+  <%= @academic_to_subject_relation.academicprograms_idbody %>
+</p>
+
+<%= link_to 'Edit', edit_academic_to_subject_relation_path(@academic_to_subject_relation) %> |
+<%= link_to 'Back', academic_to_subject_relations_path %>

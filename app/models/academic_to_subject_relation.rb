@@ -1,0 +1,2 @@
+class AcademicToSubjectRelation < ApplicationRecord
+end

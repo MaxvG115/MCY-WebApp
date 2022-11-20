@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Historical Student Scholarships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alumnos</th>
+      <th>Scholarships</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @historical_student_scholarships.each do |historical_student_scholarship| %>
+      <tr>
+        <td><%= historical_student_scholarship.alumnos_id %></td>
+        <td><%= historical_student_scholarship.scholarships_id %></td>
+        <td><%= link_to 'Show', historical_student_scholarship %></td>
+        <td><%= link_to 'Edit', edit_historical_student_scholarship_path(historical_student_scholarship) %></td>
+        <td><%= link_to 'Destroy', historical_student_scholarship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Historical Student Scholarship', new_historical_student_scholarship_path %>

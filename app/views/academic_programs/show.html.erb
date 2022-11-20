@@ -1,8 +1,9 @@
-<h1><%= @sede.sede_name %></h1>
-<ul>
-  <li><%= link_to "Actualizar", edit_sede_path(@sede) %></li>
-  <li><%= link_to "Eliminar", sede_path(@sede), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %></li>
-</ul>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name academic program:</strong>
+  <%= @academic_program.name_academic_program %>
+</p>
+
+<%= link_to 'Edit', edit_academic_program_path(@academic_program) %> |
+<%= link_to 'Back', academic_programs_path %>

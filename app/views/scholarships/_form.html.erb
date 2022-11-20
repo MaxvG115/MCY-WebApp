@@ -1,20 +1,27 @@
-<%= form_with model: scholarship do |form| %>
-  <div>
-    <%= form.label :Nombre_beca %><br>
-    <%= form.text_field :nombre_beca %>
-    <% scholarship.errors.full_messages_for(:nombre_beca).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-  <div>
-    <%= form.label :Beca_base %><br>
-    <%= form.text_field :beca_base %>
-    <% scholarship.errors.full_messages_for(:beca_base).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+<%= form_with(model: scholarship) do |form| %>
+  <% if scholarship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(scholarship.errors.count, "error") %> prohibited this scholarship from being saved:</h2>
+
+      <ul>
+        <% scholarship.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :beca_base %>
+    <%= form.number_field :beca_base %>
   </div>
 
-  <div>
+  <div class="field">
+    <%= form.label :nombre_beca %>
+    <%= form.text_field :nombre_beca %>
+  </div>
+
+  <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>

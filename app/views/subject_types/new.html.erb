@@ -1,2 +1,5 @@
-<h1>Agregar tipo materias</h1>
-<%= render "form", subject_type: @subject_type %>
+<h1>New Subject Type</h1>
+
+<%= render 'form', subject_type: @subject_type %>
+
+<%= link_to 'Back', subject_types_path %>

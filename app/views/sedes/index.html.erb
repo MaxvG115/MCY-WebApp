@@ -1,11 +1,27 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Sedes</h1>
 
-<ul>
-  <% @sedes.each do |sede| %>
-    <li>
-        <%= link_to sede.sede_name, sede%>
-    </li>
-  <% end %>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Sede name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-<%= link_to "Nueva sede", new_sede_path%>
+  <tbody>
+    <% @sedes.each do |sede| %>
+      <tr>
+        <td><%= sede.sede_name %></td>
+        <td><%= link_to 'Show', sede %></td>
+        <td><%= link_to 'Edit', edit_sede_path(sede) %></td>
+        <td><%= link_to 'Destroy', sede, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sede', new_sede_path %>

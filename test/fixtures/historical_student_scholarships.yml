@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  reference: 
-  reference: 
+  alumnos_id: 1
+  scholarships_id: 1
 
 two:
-  reference: 
-  reference: 
+  alumnos_id: 1
+  scholarships_id: 1

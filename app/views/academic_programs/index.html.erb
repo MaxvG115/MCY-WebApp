@@ -1,1 +1,27 @@
-<h1>Programas academicos</h1>
+<p id="notice"><%= notice %></p>
+
+<h1>Academic Programs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name academic program</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @academic_programs.each do |academic_program| %>
+      <tr>
+        <td><%= academic_program.name_academic_program %></td>
+        <td><%= link_to 'Show', academic_program %></td>
+        <td><%= link_to 'Edit', edit_academic_program_path(academic_program) %></td>
+        <td><%= link_to 'Destroy', academic_program, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Academic Program', new_academic_program_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Studentstatus:</strong>
+  <%= @historical_student_status.studentstatus_id %>
+</p>
+
+<p>
+  <strong>Alumnos:</strong>
+  <%= @historical_student_status.alumnos_id %>
+</p>
+
+<%= link_to 'Edit', edit_historical_student_status_path(@historical_student_status) %> |
+<%= link_to 'Back', historical_student_statuses_path %>

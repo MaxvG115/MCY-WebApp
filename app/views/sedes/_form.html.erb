@@ -1,13 +1,22 @@
-<%= form_with model: sede do |form| %>
-  <div>
-    <%= form.label :Nombre_sede %><br>
+<%= form_with(model: sede) do |form| %>
+  <% if sede.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sede.errors.count, "error") %> prohibited this sede from being saved:</h2>
+
+      <ul>
+        <% sede.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :sede_name %>
     <%= form.text_field :sede_name %>
-    <% sede.errors.full_messages_for(:sede_name).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
   </div>
 
-  <div>
+  <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>

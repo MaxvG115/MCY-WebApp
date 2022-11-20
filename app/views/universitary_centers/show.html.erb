@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Universitary center name:</strong>
+  <%= @universitary_center.universitary_center_name %>
+</p>
+
+<p>
+  <strong>Sede:</strong>
+  <%= @universitary_center.sede_id %>
+</p>
+
+<%= link_to 'Edit', edit_universitary_center_path(@universitary_center) %> |
+<%= link_to 'Back', universitary_centers_path %>

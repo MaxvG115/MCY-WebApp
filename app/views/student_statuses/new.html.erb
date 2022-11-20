@@ -1,2 +1,5 @@
-<h1>Agregar estatus de estudiante</h1>
-<%= render "form", student_statuses: @student_statuses %>
+<h1>New Student Status</h1>
+
+<%= render 'form', student_status: @student_status %>
+
+<%= link_to 'Back', student_statuses_path %>

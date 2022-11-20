@@ -1,0 +1,27 @@
+<%= form_with(model: academic_to_subject_relation) do |form| %>
+  <% if academic_to_subject_relation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(academic_to_subject_relation.errors.count, "error") %> prohibited this academic_to_subject_relation from being saved:</h2>
+
+      <ul>
+        <% academic_to_subject_relation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :subjects_id %>
+    <%= form.number_field :subjects_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :academicprograms_idbody %>
+    <%= form.number_field :academicprograms_idbody %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

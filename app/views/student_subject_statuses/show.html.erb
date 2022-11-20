@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student subject relation:</strong>
+  <%= @student_subject_status.student_subject_relation_id %>
+</p>
+
+<p>
+  <strong>Subject statuses:</strong>
+  <%= @student_subject_status.subject_statuses_id %>
+</p>
+
+<%= link_to 'Edit', edit_student_subject_status_path(@student_subject_status) %> |
+<%= link_to 'Back', student_subject_statuses_path %>

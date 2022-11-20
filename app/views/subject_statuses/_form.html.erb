@@ -1,0 +1,22 @@
+<%= form_with(model: subject_status) do |form| %>
+  <% if subject_status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(subject_status.errors.count, "error") %> prohibited this subject_status from being saved:</h2>
+
+      <ul>
+        <% subject_status.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :status_name %>
+    <%= form.text_field :status_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
