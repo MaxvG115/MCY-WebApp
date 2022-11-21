@@ -2,10 +2,4 @@
 
 <%= render 'form', alumno: @alumno %>
 
-<h3>Importar Alumnos</h3>
-<%= form_tag import_alumnos_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Subir alumnos"%>
-<%end%>
-
 <%= link_to 'Back', alumnos_path %>
