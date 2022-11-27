@@ -61,7 +61,6 @@ class AlumnosController < ApplicationController
   end
 
   def import
-    puts 'This is a message from de server******************************s'
     Alumno.import(params[:file])
     redirect_to alumnos_path, notice: "Alumnos agregados con éxito"
   end
@@ -75,6 +74,6 @@ class AlumnosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def alumno_params
-      params.require(:alumno).permit(:matricula, :name, :email, :phone, :periodo_actual, :porcentaje_beca, :nivel, :unidades_permitdas_a_inscribir, :promedio_acomulado, :trimestre_acreditado, :ultimo_periodo_cursado, :fecha_entrada, :fecha_graduacion_planeada, :numero_cursos_cursados, :beca, :patrocinado)
+      params.require(:alumno).permit(:matricula, :nombre, :correo, :telefono, :periodo_actual, :porcentaje_beca, :nivel, :unidades_permitdas_a_inscribir, :promedio_acomulado, :trimestre_acreditado, :ultimo_periodo_cursado, :fecha_entrada, :fecha_graduacion_planeada, :numero_cursos_cursados, :beca, :patrocinado)
     end
 end

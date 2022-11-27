@@ -24,4 +24,10 @@
 
 <br>
 
+<h3>Importar Estatus de materia</h3>
+<%= form_tag import_subject_statuses_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Subir estatus de materia"%>
+<%end%>
+
 <%= link_to 'New Subject Status', new_subject_status_path %>

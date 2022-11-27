@@ -24,4 +24,10 @@
 
 <br>
 
+<h3>Importar Tipos de materia</h3>
+<%= form_tag import_subject_types_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Subir Tipos de materia"%>
+<%end%>
+
 <%= link_to 'New Subject Type', new_subject_type_path %>

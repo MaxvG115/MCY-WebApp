@@ -30,4 +30,10 @@
 
 <br>
 
+<h3>Importar Materias</h3>
+<%= form_tag import_subjects_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Subir alumnos"%>
+<%end%>
+
 <%= link_to 'New Subject', new_subject_path %>

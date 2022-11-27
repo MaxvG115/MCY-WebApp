@@ -24,4 +24,10 @@
 
 <br>
 
+<h3>Importar Programas academicos</h3>
+<%= form_tag import_academic_programs_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Subir programas academicos"%>
+<%end%>
+
 <%= link_to 'New Academic Program', new_academic_program_path %>

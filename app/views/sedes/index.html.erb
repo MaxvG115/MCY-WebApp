@@ -24,4 +24,10 @@
 
 <br>
 
+<h3>Importar Sedes</h3>
+<%= form_tag import_sedes_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Subir sedes"%>
+<%end%>
+
 <%= link_to 'New Sede', new_sede_path %>

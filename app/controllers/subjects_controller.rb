@@ -57,6 +57,11 @@ class SubjectsController < ApplicationController
     end
   end
 
+  def import
+    Subject.import(params[:file])
+    redirect_to subjects_path, notice: "Materias agregadas con éxito"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_subject

@@ -26,4 +26,10 @@
 
 <br>
 
+<h3>Importar Becas</h3>
+<%= form_tag import_scholarships_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Subir becas"%>
+<%end%>
+
 <%= link_to 'New Scholarship', new_scholarship_path %>

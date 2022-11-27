@@ -57,6 +57,11 @@ class SedesController < ApplicationController
     end
   end
 
+  def import
+    Sede.import(params[:file])
+    redirect_to sedes_path, notice: "Sedes agregadas con éxito"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sede

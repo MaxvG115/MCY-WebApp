@@ -24,4 +24,10 @@
 
 <br>
 
+<h3>Importar Estatus de alumnos</h3>
+<%= form_tag import_student_statuses_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Subir estatus de alumnos"%>
+<%end%>
+
 <%= link_to 'New Student Status', new_student_status_path %>

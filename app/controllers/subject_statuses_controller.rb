@@ -57,6 +57,11 @@ class SubjectStatusesController < ApplicationController
     end
   end
 
+  def import
+    SubjectStatus.import(params[:file])
+    redirect_to subject_statuses_path, notice: "Estatus de materia agregados con éxito"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_subject_status

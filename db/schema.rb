@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_31_023339) do
+ActiveRecord::Schema.define(version: 2022_11_22_012101) do
 
   create_table "academic_programs", force: :cascade do |t|
     t.string "name_academic_program", null: false
@@ -30,9 +30,9 @@ ActiveRecord::Schema.define(version: 2022_10_31_023339) do
 
   create_table "alumnos", force: :cascade do |t|
     t.string "matricula", null: false
-    t.string "name", null: false
-    t.string "email", null: false
-    t.string "phone", null: false
+    t.string "nombre", null: false
+    t.string "correo", null: false
+    t.string "telefono", null: false
     t.string "periodo_actual", null: false
     t.integer "porcentaje_beca"
     t.string "nivel", null: false
@@ -47,9 +47,9 @@ ActiveRecord::Schema.define(version: 2022_10_31_023339) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "universitary_centers_id"
-    t.index ["email"], name: "index_alumnos_on_email", unique: true
+    t.index ["correo"], name: "index_alumnos_on_correo", unique: true
     t.index ["matricula"], name: "index_alumnos_on_matricula", unique: true
-    t.index ["phone"], name: "index_alumnos_on_phone", unique: true
+    t.index ["telefono"], name: "index_alumnos_on_telefono", unique: true
     t.index ["universitary_centers_id"], name: "index_alumnos_on_universitary_centers_id"
   end
 

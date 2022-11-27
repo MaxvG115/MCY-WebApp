@@ -57,6 +57,11 @@ class AcademicProgramsController < ApplicationController
     end
   end
 
+  def import
+    AcademicProgram.import(params[:file])
+    redirect_to academic_programs_path, notice: "Programas academicos agregados con éxito"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_academic_program
